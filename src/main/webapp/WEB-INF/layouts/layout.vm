@@ -1,23 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
- <title>Spring & Velocity</title>  
+	#parse("/layouts/_meta.vm")
 </head>
 <body>
-  <div>
-      #parse("/WEB-INF/layouts/_header.vm")
-  </div>
-  
-  
-  <div>
-  
-    <!-- View abc.vm is inserted here -->
-    <!-- Noi dung View abc.vm se duoc tren tai day -->   
-    $screen_content
- 
-  </div>
-  
-  <div>
-      #parse("/WEB-INF/layouts/_footer.vm")
-  </div>
+	<div>
+	#parse("/layouts/_header.vm")
+	</div>
+
+	<div>
+	$screen_content
+	</div>
+
+	<div>
+	#parse("/layouts/_footer.vm")
+	</div>
 </body>
 </html>
