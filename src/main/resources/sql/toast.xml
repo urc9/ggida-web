@@ -3,8 +3,24 @@
 
 <mapper namespace="org.ggida.web.dao.ToastDao">
 	<select id="selectList" resultType="org.ggida.web.model.Toast">
-		SELECT id, name
-		FROM toast
+		SELECT id, name FROM toast
 	</select>
+	<select id="select" resultType="org.ggida.web.model.Toast">
+		SELECT id, name FROM toast
+		WHERE id = #{id}
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO toast (name)
+		VALUES (#{name})
+	</insert>
+	<update id="update">
+		UPDATE toast SET name = #{name}
+		WHERE id = #{id}
+	</update>
+	<delete id="delete">
+		DELETE FROM toast
+		WHERE id = #{id}
+	</delete>
 </mapper>
 

@@ -4,6 +4,16 @@ public class Toast {
 	private int id;
 	private String name;
 	
+	public Toast() {
+	}
+	public Toast(String name) {
+		this(0, name);
+	}
+	public Toast(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
 	public int getId() {
 		return id;
 	}

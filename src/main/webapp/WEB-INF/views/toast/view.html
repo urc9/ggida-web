@@ -1,0 +1,10 @@
+#set ($layout = "/layouts/layout.vm")
+
+<form method="post" action="/toast/$!id">
+	<input type="text" name="name" value="$!toast.name" />
+	<input type="submit" value="update" />
+</form>
+
+<form method="post" action="/toast/$!id/delete">
+	<input type="submit" value="delete" />
+</form>

@@ -1,0 +1,9 @@
+#set ($layout = "/layouts/layout.vm")
+#foreach ($toast in $list)
+	$toast.id <a href="/toast/$!toast.id">$toast.name</a> <br />
+#end
+
+<form method="post" action="/toast">
+	<input type="text" name="name" />
+	<input type="submit" value="add" />
+</form>

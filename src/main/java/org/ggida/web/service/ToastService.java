@@ -12,7 +12,21 @@ public class ToastService {
 	@Autowired
 	private ToastDao toastDao;
 	
-	public List<Toast> getToastList() {
+	public List<Toast> getList() {
 		return toastDao.selectList();
+	}
+	public Toast get(int id) {
+		return toastDao.select(id);
+	}
+	
+	public void update(Toast toast) {
+		if (toast.getId() > 0) {
+			toastDao.update(toast);
+		} else {
+			toastDao.insert(toast);
+		}
+	}
+	public void delete(int id) {
+		toastDao.delete(id);
 	}
 }
