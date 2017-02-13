@@ -34,7 +34,7 @@ public class ToastController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.POST)
 	public String update(Model model, @PathVariable int id, String name) {
 		toastService.update(new Toast(id, name));
-		return "redirect:/toast" + id;
+		return "redirect:/toast/" + id;
 	}
 	@RequestMapping(value = "/{id}/delete", method = RequestMethod.POST)
 	public String delete(Model model, @PathVariable int id) {
